@@ -6,7 +6,7 @@ const cardImages = [
   { "src": "/img/potato-display.png", matched: false },
   { "src": "/img/potato-manuscript.png", matched: false },
   { "src": "/img/potato-monk.png", matched: false },
-  { "src": "/img/potato-necklace.png", matched: false },
+  { "src": "/img/potato-priestess.png", matched: false },
   { "src": "/img/potato-pilgrim.png", matched: false },
   { "src": "/img/potato-halo.png", matched: false }
 ]
