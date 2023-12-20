@@ -24,6 +24,8 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
 
+    setChoiceOne(null)
+    setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
   }
@@ -67,10 +69,16 @@ function App() {
     setDisabled(false)
   }
 
+  // start a new game automatically
+  useEffect(() => {
+    shuffleCards()
+  }, [])
+
   return (
     <div className="App">
       <h1>Potato Match</h1>
       <button onClick={shuffleCards}>New Game</button>
+      <p>Turns: {turns}</p>
       <div className="card-grid">
         {cards.map(card => (
           <SingleCard 
@@ -82,6 +90,7 @@ function App() {
           />
         ))}
       </div>
+      
     </div>
   );
 }
